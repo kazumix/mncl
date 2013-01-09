@@ -9,13 +9,13 @@ it performs an alertable wait and does not return control to its caller until th
 
     Mncl::Beep( 440 ,300 );
 
-##void On( )
+##On( )
 Generates simple tones on the speaker continuous.
 
-##void Off( )
+##Off( )
 Stop tones the speaker.
 
-##void SetFrequency( WORD wFreq )
+##SetFrequency( wFreq )
 This method doesn't touch speaker. Just changes frequency settings.
 If the 'On( )' method was already called then the tones should be change the new frequency tones.
 
