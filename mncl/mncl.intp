@@ -1,0 +1,40 @@
+"General"
+{
+"ProjFileMajorVersion" = "8"
+"ProjFileMinorVersion" = "0"
+"NestedProjectID" = "{CC42CA02-830C-4515-AEC4-EB9426DBE52E}"
+}
+"Configurations"
+{
+    "Debug|win32"
+    {
+    "Args" = ""
+    "DbgAttach" = "0"
+    "DbgCmd" = ""
+    "Dseg" = "0"
+    "Node" = "Local"
+    "Odir" = "0"
+    }
+    "Release|win32"
+    {
+    "Args" = ""
+    "DbgAttach" = "0"
+    "DbgCmd" = ""
+    "Dseg" = "0"
+    "Node" = "Local"
+    "Odir" = "0"
+    }
+}
+"Files"
+{
+    "mncl.vcproj"
+    {
+    "ProjRelPath" = "T"
+    }
+}
+"ProjStartupServices"
+{
+}
+"Globals"
+{
+}

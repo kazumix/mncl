@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{D987F051-CB2C-4081-A03B-E8D10A4A0B36}") = "mncl", "mncl\mncl.intp", "{AAEB789F-01A0-4074-9B91-A907D00C1E31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|win32 = Debug|win32
+		Release|win32 = Release|win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AAEB789F-01A0-4074-9B91-A907D00C1E31}.Debug|win32.ActiveCfg = Debug|win32
+		{AAEB789F-01A0-4074-9B91-A907D00C1E31}.Debug|win32.Build.0 = Debug|win32
+		{AAEB789F-01A0-4074-9B91-A907D00C1E31}.Release|win32.ActiveCfg = Release|win32
+		{AAEB789F-01A0-4074-9B91-A907D00C1E31}.Release|win32.Build.0 = Release|win32
+		{CC42CA02-830C-4515-AEC4-EB9426DBE52E}.Debug|win32.ActiveCfg = Debug|Win32
+		{CC42CA02-830C-4515-AEC4-EB9426DBE52E}.Release|win32.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
