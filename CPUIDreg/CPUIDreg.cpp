@@ -28,11 +28,10 @@
 \*****************************************************************************/#include <rt.h>
 #include "CPUIDreg.hpp"
 #include <stdio.h>
+
 #ifdef _MNCL_RSL_USE
 namespace Mncl{		/// top of namespace
 #endif
-
-using namespace std;
 
 
 //

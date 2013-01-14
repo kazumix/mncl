@@ -9,14 +9,13 @@
 *
 \*****************************************************************************/
 #include "Beep.hpp"
+#include <rt.h>
+
 #ifdef _MNCL_RSL_USE
 namespace Mncl{		/// top of namespace
 #endif
 
-using namespace std;
 
-
-#include <rt.h>
 
 
 //

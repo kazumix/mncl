@@ -17,11 +17,11 @@
 #include <rt.h>
 #include <stdio.h>
 #include "MSRreg.hpp"
+
 #ifdef _MNCL_RSL_USE
 namespace Mncl{		/// top of namespace
 #endif
 
-using namespace std;
 
 
 extern "C" void Callback(LPPROC lpfnEntry, LPVOID lpParameter);

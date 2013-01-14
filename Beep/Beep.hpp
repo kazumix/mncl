@@ -14,6 +14,7 @@
 *
 \*****************************************************************************/
 #pragma once
+#include <rt.h>
 
 
 #ifdef _MNCL_RSL_USE
@@ -24,7 +25,6 @@ namespace Mncl {		/// top of namespace
 #endif
 
 
-#include <rt.h>
 
 class mncl_API Beep {
 
@@ -45,16 +45,18 @@ public:
 	void SetFrequency( DWORD wFreq );
 	WORD GetDivisor( WORD wDiv ){		return m_wDivisor;		};
 	DWORD GetFrequency( DWORD wFreq ){	return 1193180 * m_wDivisor;	};
-};
 
-#define	BEEP_C		440
-#define	BEEP_D		494
-#define	BEEP_E		554
-#define	BEEP_F		587
-#define	BEEP_G		659
-#define	BEEP_A		740
-#define	BEEP_B		830
-#define	BEEP_O5C	880
+	enum OCTAVE {
+		O4C		=440,
+		O4D		=494,
+		O4E		=554,
+		O4F		=587,
+		O4G		=659,
+		O4A		=740,
+		O4B		=830,
+		O5C	=880
+	};
+};
 
 
 #ifdef _MNCL_RSL_USE

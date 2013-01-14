@@ -8,11 +8,11 @@
 {
     "Debug|win32"
     {
-    "Args" = ""
+    "Args" = "mncl.rsl"
     "DbgAttach" = "0"
-    "DbgCmd" = ""
+    "DbgCmd" = "D:\\work\\Git\\mncl\\mncl\\Debug\\runrsl.rta"
     "Dseg" = "0"
-    "Node" = "Local"
+    "Node" = "NodeA"
     "Odir" = "0"
     }
     "Release|win32"

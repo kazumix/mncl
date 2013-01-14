@@ -239,6 +239,14 @@
 				>
 			</File>
 			<File
+				RelativePath="..\CMOS\CMOS.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\CMOS\CMOS.hpp"
+				>
+			</File>
+			<File
 				RelativePath="..\CPUIDreg\CPUIDreg.cpp"
 				>
 			</File>
