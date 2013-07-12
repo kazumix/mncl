@@ -41,10 +41,11 @@ public:
 		// âπÇÃéùë±éûä‘
 	void On( );
 	void Off( );
+	void Sound( DWORD dwFreq,DWORD dwDurationMS );
 	void SetDivisor( WORD wDiv );
 	void SetFrequency( DWORD wFreq );
 	WORD GetDivisor( WORD wDiv ){		return m_wDivisor;		};
-	DWORD GetFrequency( DWORD wFreq ){	return 1193180 * m_wDivisor;	};
+	DWORD GetFrequency( void ){	return 1193180 * m_wDivisor;	};
 
 	enum OCTAVE {
 		O4C		=440,
@@ -54,7 +55,7 @@ public:
 		O4G		=659,
 		O4A		=740,
 		O4B		=830,
-		O5C	=880
+		O5C		=880
 	};
 };
 

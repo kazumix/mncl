@@ -282,6 +282,14 @@
 				RelativePath=".\rslmain.cpp"
 				>
 			</File>
+			<File
+				RelativePath="..\UART16550\UART16550.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\UART16550\UART16550.hpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"

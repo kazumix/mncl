@@ -27,7 +27,6 @@ void Beep::On( void )
 	outbyte( 0x61 ,inbyte( 0x61 ) | 0x03 );
 }
 
-
 //
 // Beep off
 
@@ -65,15 +64,19 @@ Beep::Beep()
 
 Beep::Beep( DWORD dwFreq,DWORD dwDurationMS )
 {
-	m_bOn		= false;
+	Sound( dwFreq ,dwDurationMS );
+}
+
+void Beep::Sound( DWORD dwFreq,DWORD dwDurationMS )
+{
 	SetFrequency( dwFreq );
 
-	RtSleepEx( 1 );
-	 
+	m_bOn		= true;
 	On();
 	
 	RtSleepEx( dwDurationMS );
 	
+	m_bOn		= false;
 	Off();
 }
 
