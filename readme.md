@@ -1,4 +1,4 @@
-# mncl INtime application helper libraly
+# mncl INtime application helper library
 
 ## to build
 use mncl.sln at visualstudio2008
