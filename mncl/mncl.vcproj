@@ -263,14 +263,6 @@
 				>
 			</File>
 			<File
-				RelativePath="..\PerformanceCounter\PerformanceCounter.cpp"
-				>
-			</File>
-			<File
-				RelativePath="..\PerformanceCounter\PerformanceCounter.hpp"
-				>
-			</File>
-			<File
 				RelativePath="..\RSL\RSL.cpp"
 				>
 			</File>
@@ -280,6 +272,14 @@
 			</File>
 			<File
 				RelativePath=".\rslmain.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\StopWatch\StopWatch.cpp"
+				>
+			</File>
+			<File
+				RelativePath="..\StopWatch\StopWatch.hpp"
 				>
 			</File>
 			<File

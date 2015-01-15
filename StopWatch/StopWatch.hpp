@@ -1,14 +1,14 @@
 /*****************************************************************************
 *
-* FILE NAME:		PerformanceCounter.hpp
+* FILE NAME:		StopWatch.hpp
 *
-*		INtime Pentium counter helper class
+*		INtime time measure class
 *
 *		programed by Kazumix 2012
 *
 *
 *	// copy constructor
-*	PerformanceCounter(PerformanceCounter&);
+*	StopWatch(StopWatch&);
 *
 *	// stopwatch control
 *	bool Start(void);			// start watch
@@ -37,12 +37,12 @@ namespace Mncl {		/// top of namespace
 
 
 
-class mncl_API PerformanceCounter
+class mncl_API StopWatch
 {
 public:
-	PerformanceCounter(void);
-	PerformanceCounter(PerformanceCounter&);
-	~PerformanceCounter(void);
+	StopWatch(void);
+	StopWatch(StopWatch&);
+	~StopWatch(void);
 private:
 	QWORD		m_Start;
 	QWORD		m_Stop;
@@ -58,6 +58,7 @@ public:
 	double GetMicrosec(void);
 	double GetMillisec(void);
 	double GetSec(void);
+	QWORD GetRaw(void);
 private:
 	QWORD GetPentiumCounter(void);
 };

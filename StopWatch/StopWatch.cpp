@@ -1,6 +1,6 @@
 /*****************************************************************************
 *
-* FILE NAME:		PerformanceCounter.hpp
+* FILE NAME:		StopWatch.hpp
 *
 *		INtime Pentium counter helper class
 *
@@ -8,14 +8,14 @@
 *
 *
 \*****************************************************************************/
-#include "PerformanceCounter.hpp"
+#include "StopWatch.hpp"
 #include <rt.h>
 
 #ifdef _MNCL_RSL_USE
 namespace Mncl{		/// top of namespace
 #endif
 
-PerformanceCounter::PerformanceCounter(void)
+StopWatch::StopWatch(void)
 :m_Start(0),
 m_Stop(0),
 m_Diff(0),
@@ -26,7 +26,7 @@ m_CPUspeed(0)
 }
 
 // copy constructor
-PerformanceCounter::PerformanceCounter( PerformanceCounter& original )
+StopWatch::StopWatch( StopWatch& original )
 {
 	m_Start	= original.m_Start;
 	m_Stop	= original.m_Stop;
@@ -35,12 +35,12 @@ PerformanceCounter::PerformanceCounter( PerformanceCounter& original )
 	m_CPUspeed		= original.m_CPUspeed;
 }
 
-PerformanceCounter::~PerformanceCounter(void)
+StopWatch::~StopWatch(void)
 {
 }
 
 // start the stopwatch
-bool PerformanceCounter::Start(void)
+bool StopWatch::Start(void)
 {
 	if( ! m_NowMeasuring )
 	{
@@ -55,7 +55,7 @@ bool PerformanceCounter::Start(void)
 }
 
 // stop the stopwatch
-QWORD PerformanceCounter::Stop(void)
+QWORD StopWatch::Stop(void)
 {
 	if( m_NowMeasuring )
 	{
@@ -76,13 +76,13 @@ QWORD PerformanceCounter::Stop(void)
 }
 
 // read tsc
-QWORD PerformanceCounter::GetPentiumCounter(void)
+QWORD StopWatch::GetPentiumCounter(void)
 {
 	_asm	rdtsc;
 }
 
 // get CPU speed ( Hz )
-DWORD PerformanceCounter::GetCPUSpeed(void)
+DWORD StopWatch::GetCPUSpeed(void)
 {
 	if( ! m_CPUspeed )
 	{
@@ -99,24 +99,29 @@ DWORD PerformanceCounter::GetCPUSpeed(void)
 		return m_CPUspeed;
 }
 
-double PerformanceCounter::GetNanosec(void)
+double StopWatch::GetNanosec(void)
 {
 	return (double)m_Diff * (1000000000.0 / GetCPUSpeed());
 }
 
-double PerformanceCounter::GetMicrosec(void)
+double StopWatch::GetMicrosec(void)
 {
 	return (double)m_Diff * (1000000.0 / GetCPUSpeed());
 }
 
-double PerformanceCounter::GetMillisec(void)
+double StopWatch::GetMillisec(void)
 {
 	return (double)m_Diff * (1000.0 / GetCPUSpeed());
 }
 
-double PerformanceCounter::GetSec(void)
+double StopWatch::GetSec(void)
 {
 	return (double)m_Diff * (1.0 / GetCPUSpeed());
+}
+
+QWORD GetRaw(void)
+{
+	return m_Diff;
 }
 
 
@@ -126,11 +131,11 @@ double PerformanceCounter::GetSec(void)
 
 
 /* sample
-#include "PerformanceCounter.hpp"
+#include "StopWatch.hpp"
 #include <iostream>
 
 	//
-	PerformanceCounter		t1;
+	StopWatch		t1;
 
 	RtSleep(10);
 
