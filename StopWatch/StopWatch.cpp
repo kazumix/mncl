@@ -52,11 +52,10 @@ bool StopWatch::IsInvariantTSCSupport(void)
 }
 
 // start the stopwatch
-bool StopWatch::Start(void)
+void StopWatch::Start(void)
 {
 	// start watch
 	m_Start			= GetPentiumCounter();
-	return true;
 }
 
 // stop the stopwatch

@@ -49,7 +49,7 @@ public:
 	QWORD		m_Diff;
 	DWORD		m_CPUspeed;		// Hz
 public:
-	bool Start(void);			// start watch
+	void Start(void);			// start watch
 	QWORD Stop(void);			// stop watch
 	DWORD GetCPUSpeed(void);	// 
 
