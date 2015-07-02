@@ -20,7 +20,6 @@ m_CPUspeed(0)
 {
 	m_CPUspeed			= GetCPUSpeed();
 	GetPentiumCounter	= (true == IsInvariantTSCSupport()) ? GetTSCway2 : GetTSCway1;
-//	GetPentiumCounter	= GetTSCway1;
 }
 
 // copy constructor
