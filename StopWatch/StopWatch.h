@@ -81,6 +81,11 @@ public:
 	void Start();		// パフォーマンス計測スタート
 	void Stop();		// パフォーマンス計測ストップ
 	void Reset();		// パフォーマンス統計のリセット
+
+	double GetAve(void);	// 平均時間(us)
+	double GetMin(void);	// 最短時間(us)
+	double GetMax(void);	// 最長時間(us)
+	QWORD GetCount(void);	// トータル計測回数
 };
 
 

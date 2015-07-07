@@ -20,6 +20,7 @@ m_CPUspeed(0)
 {
 	m_CPUspeed			= GetCPUSpeed();
 	GetPentiumCounter	= (true == IsInvariantTSCSupport()) ? GetTSCway2 : GetTSCway1;
+//	GetPentiumCounter	= GetTSCway1;
 }
 
 // copy constructor
@@ -172,4 +173,20 @@ void PerfMon::Reset()
 	m_fMin	= _RWSTD_FLT_MAX;
 	m_qwCount	= 0;
 	m_qwWhenMax	= 0;
+}
+double PerfMon::GetAve(void)
+{
+	return m_fAve;
+}
+double PerfMon::GetMin(void)
+{
+	return m_fMin;
+}
+double PerfMon::GetMax(void)
+{
+	return m_fMax;
+}
+QWORD PerfMon::GetCount(void)
+{
+	return m_qwCount;
 }
